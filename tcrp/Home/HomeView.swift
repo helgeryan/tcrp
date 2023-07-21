@@ -31,55 +31,12 @@ struct HomeView: View {
                 .clipShape(Circle())
             
             HStack(spacing: 20) {
-                VStack(spacing: 20) {
-                    Image(systemName: "phone")
-                        .resizable()
-                        .frame(width: 50, height: 50)
-                        .scaledToFit()
-                        .foregroundColor(.gray)
-                    Text("Contact")
-                        .foregroundColor(.gray)
-                        .fontWeight(.semibold)
-                        .font(.system(size: 20))
-                }
-                .frame(width: cardWidth, height: cardWidth)
-                .background(Color("lightBlue"))
-                .cornerRadius(10)
-                
-                VStack(spacing: 20) {
-                    Image(systemName: "list.bullet.clipboard.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .foregroundColor(.gray)
-                        .frame(width: 50, height: 50)
-                    Text("Programs")
-                        .foregroundColor(.gray)
-                        .fontWeight(.semibold)
-                        .font(.system(size: 20))
-                }
-                .frame(width: cardWidth, height: cardWidth)
-                .background(Color("lightBlue"))
-                .cornerRadius(10)
+                TileView(tileWidth: cardWidth, iconName: "phone", title: "Contact")
+                TileView(tileWidth: cardWidth, iconName: "list.bullet.clipboard.fill", title: "Programs")
             }
             
-            HStack {
-                VStack(spacing: 20) {
-                    Image(systemName: "book")
-                        .resizable()
-                        .scaledToFit()
-                        .foregroundColor(.gray)
-                        .frame(width: 50, height: 50)
-                    Text("Book")
-                        .foregroundColor(.gray)
-                        .fontWeight(.semibold)
-                        .font(.system(size: 20))
-                }
-                .frame(width: cardWidth, height: cardWidth)
-                .background(Color("lightBlue"))
-                .cornerRadius(10)
-                
-            }
             
+            TileView(tileWidth: cardWidth, iconName: "book", title: "Book")
             Spacer()
         }
         .padding()
