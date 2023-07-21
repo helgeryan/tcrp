@@ -12,22 +12,26 @@ struct TileView: View {
     let iconName: String
     let title: String
     var body: some View {
-        HStack {
-            VStack(spacing: 20) {
-                Image(systemName: iconName)
-                    .resizable()
-                    .scaledToFit()
-                    .foregroundColor(.gray)
-                    .frame(width: 50, height: 50)
-                Text(title)
-                    .foregroundColor(.gray)
-                    .fontWeight(.semibold)
-                    .font(.system(size: 20))
+        NavigationLink {
+            ProgramsView()
+        } label: {
+            HStack {
+                VStack(spacing: 20) {
+                    Image(systemName: iconName)
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundColor(.gray)
+                        .frame(width: 50, height: 50)
+                    Text(title)
+                        .foregroundColor(.gray)
+                        .fontWeight(.semibold)
+                        .font(.system(size: 20))
+                }
+                .frame(width: tileWidth, height: tileWidth)
+                .background(Color("lightBlue"))
+                .cornerRadius(10)
+                
             }
-            .frame(width: tileWidth, height: tileWidth)
-            .background(Color("lightBlue"))
-            .cornerRadius(10)
-            
         }
     }
 }
