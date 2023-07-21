@@ -14,6 +14,7 @@
 		E6C13E7C2A69E3D700143E63 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C13E7B2A69E3D700143E63 /* HomeView.swift */; };
 		E6C13E802A6B07FF00143E63 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C13E7F2A6B07FF00143E63 /* TileView.swift */; };
 		E6C13E832A6B099900143E63 /* ProgramsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C13E822A6B099900143E63 /* ProgramsView.swift */; };
+		E6C13E862A6B228A00143E63 /* ProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C13E852A6B228A00143E63 /* ProgramView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E6C13E7B2A69E3D700143E63 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E6C13E7F2A6B07FF00143E63 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
 		E6C13E822A6B099900143E63 /* ProgramsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsView.swift; sourceTree = "<group>"; };
+		E6C13E852A6B228A00143E63 /* ProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +107,18 @@
 		E6C13E812A6B098300143E63 /* Programs */ = {
 			isa = PBXGroup;
 			children = (
+				E6C13E842A6B227900143E63 /* Program */,
 				E6C13E822A6B099900143E63 /* ProgramsView.swift */,
 			);
 			path = Programs;
+			sourceTree = "<group>";
+		};
+		E6C13E842A6B227900143E63 /* Program */ = {
+			isa = PBXGroup;
+			children = (
+				E6C13E852A6B228A00143E63 /* ProgramView.swift */,
+			);
+			path = Program;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +196,7 @@
 				E6C13E802A6B07FF00143E63 /* TileView.swift in Sources */,
 				E6C13E832A6B099900143E63 /* ProgramsView.swift in Sources */,
 				E6C13E6C2A69D0B600143E63 /* tcrpApp.swift in Sources */,
+				E6C13E862A6B228A00143E63 /* ProgramView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

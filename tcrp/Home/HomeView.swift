@@ -11,7 +11,7 @@ struct HomeView: View {
     var body: some View {
         let cardWidth = (UIScreen.main.bounds.width / 2) - 60
         NavigationStack {
-
+        
             VStack(spacing: 20) {
                 
                 HStack {

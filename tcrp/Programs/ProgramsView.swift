@@ -15,29 +15,26 @@ struct ProgramsView: View {
     ]
     
     var body: some View {
-            List {
-                Section("Programs") {
-                    ForEach(programs, id: \.name) { program in
-                        Button {
-                            
-                        } label: {
-                            Label(program.name, systemImage: program.image).foregroundColor(program.color)
-                        }
+        List {
+            Section("Programs") {
+                ForEach(programs, id: \.name) { program in
+                    NavigationLink {
+                        ProgramView(program: program)
+                    } label: {
+                        Label(program.name, systemImage: program.image).foregroundColor(program.color)
                     }
                 }
             }
-            .navigationTitle("Programs")
-            .navigationDestination(for: Program.self) { program in
-                VStack(spacing: 20) {
-                    Text("\(program.name) - \(program.image) ").font(.largeTitle).bold()
-                }
-            }
         }
+        .navigationTitle("Programs")
+    }
 }
 
 struct ProgramsView_Previews: PreviewProvider {
     static var previews: some View {
-        ProgramsView()
+        NavigationStack {
+            ProgramsView()
+        }
     }
 }
 
