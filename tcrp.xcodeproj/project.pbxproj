@@ -28,6 +28,9 @@
 		E6C13EA22A6EE82B00143E63 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C13EA02A6EE82B00143E63 /* InputView.swift */; };
 		E6C13EA52A6EE84F00143E63 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C13EA42A6EE84F00143E63 /* User.swift */; };
 		E6C13EA72A6EE96200143E63 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E6C13EA62A6EE96200143E63 /* GoogleService-Info.plist */; };
+		E6F65FFA2A6F1531008A8913 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F65FF92A6F1531008A8913 /* SideMenuView.swift */; };
+		E6F65FFD2A6F187E008A8913 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F65FFC2A6F187E008A8913 /* SideMenu.swift */; };
+		E6F65FFF2A6F1891008A8913 /* SideMenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F65FFE2A6F1891008A8913 /* SideMenuType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		E6C13EA02A6EE82B00143E63 /* InputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		E6C13EA42A6EE84F00143E63 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E6C13EA62A6EE96200143E63 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E6F65FF92A6F1531008A8913 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		E6F65FFC2A6F187E008A8913 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		E6F65FFE2A6F1891008A8913 /* SideMenuType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,7 @@
 		E6C13E7A2A69E3CD00143E63 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E6F65FFB2A6F186D008A8913 /* SideMenu */,
 				E6C13E7B2A69E3D700143E63 /* HomeView.swift */,
 			);
 			path = Home;
@@ -204,6 +211,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E6F65FFB2A6F186D008A8913 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				E6F65FF92A6F1531008A8913 /* SideMenuView.swift */,
+				E6F65FFC2A6F187E008A8913 /* SideMenu.swift */,
+				E6F65FFE2A6F1891008A8913 /* SideMenuType.swift */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -293,9 +310,12 @@
 				E6C13E832A6B099900143E63 /* ProgramsView.swift in Sources */,
 				E6C13E922A6EE77100143E63 /* AuthViewModel.swift in Sources */,
 				E6C13E6C2A69D0B600143E63 /* tcrpApp.swift in Sources */,
+				E6F65FFA2A6F1531008A8913 /* SideMenuView.swift in Sources */,
+				E6F65FFF2A6F1891008A8913 /* SideMenuType.swift in Sources */,
 				E6C13EA12A6EE82B00143E63 /* SettingsRowView.swift in Sources */,
 				E6C13E8B2A6ECF7A00143E63 /* ExerciseView.swift in Sources */,
 				E6C13EA22A6EE82B00143E63 /* InputView.swift in Sources */,
+				E6F65FFD2A6F187E008A8913 /* SideMenu.swift in Sources */,
 				E6C13E942A6EE77100143E63 /* LoginView.swift in Sources */,
 				E6C13E862A6B228A00143E63 /* ProgramView.swift in Sources */,
 			);
