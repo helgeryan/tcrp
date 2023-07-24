@@ -15,6 +15,8 @@
 		E6C13E802A6B07FF00143E63 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C13E7F2A6B07FF00143E63 /* TileView.swift */; };
 		E6C13E832A6B099900143E63 /* ProgramsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C13E822A6B099900143E63 /* ProgramsView.swift */; };
 		E6C13E862A6B228A00143E63 /* ProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C13E852A6B228A00143E63 /* ProgramView.swift */; };
+		E6C13E882A6E180100143E63 /* golfswing.mov in Resources */ = {isa = PBXBuildFile; fileRef = E6C13E872A6E180100143E63 /* golfswing.mov */; };
+		E6C13E8B2A6ECF7A00143E63 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C13E8A2A6ECF7A00143E63 /* ExerciseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		E6C13E7F2A6B07FF00143E63 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
 		E6C13E822A6B099900143E63 /* ProgramsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsView.swift; sourceTree = "<group>"; };
 		E6C13E852A6B228A00143E63 /* ProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramView.swift; sourceTree = "<group>"; };
+		E6C13E872A6E180100143E63 /* golfswing.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = golfswing.mov; sourceTree = "<group>"; };
+		E6C13E8A2A6ECF7A00143E63 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		E6C13E6A2A69D0B600143E63 /* tcrp */ = {
 			isa = PBXGroup;
 			children = (
+				E6C13E872A6E180100143E63 /* golfswing.mov */,
 				E6C13E812A6B098300143E63 /* Programs */,
 				E6C13E7D2A6B07DE00143E63 /* Resources */,
 				E6C13E7A2A69E3CD00143E63 /* Home */,
@@ -116,9 +121,18 @@
 		E6C13E842A6B227900143E63 /* Program */ = {
 			isa = PBXGroup;
 			children = (
+				E6C13E892A6ECF6A00143E63 /* Exercise */,
 				E6C13E852A6B228A00143E63 /* ProgramView.swift */,
 			);
 			path = Program;
+			sourceTree = "<group>";
+		};
+		E6C13E892A6ECF6A00143E63 /* Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				E6C13E8A2A6ECF7A00143E63 /* ExerciseView.swift */,
+			);
+			path = Exercise;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6C13E732A69D0B800143E63 /* Preview Assets.xcassets in Resources */,
+				E6C13E882A6E180100143E63 /* golfswing.mov in Resources */,
 				E6C13E702A69D0B800143E63 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,6 +211,7 @@
 				E6C13E802A6B07FF00143E63 /* TileView.swift in Sources */,
 				E6C13E832A6B099900143E63 /* ProgramsView.swift in Sources */,
 				E6C13E6C2A69D0B600143E63 /* tcrpApp.swift in Sources */,
+				E6C13E8B2A6ECF7A00143E63 /* ExerciseView.swift in Sources */,
 				E6C13E862A6B228A00143E63 /* ProgramView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
