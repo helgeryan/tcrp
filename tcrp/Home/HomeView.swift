@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
         let cardWidth = (UIScreen.main.bounds.width / 2) - 60
         NavigationStack {
@@ -15,11 +16,15 @@ struct HomeView: View {
             VStack(spacing: 20) {
                 
                 HStack {
-                    Image(systemName: "gear")
-                        .resizable()
-                        .foregroundColor(Color(.gray))
-                        .frame(width: 30, height: 30, alignment: .leading)
-                    
+                    Button {
+                        viewModel.signOut()
+                    } label: {
+                        Image(systemName: "gear")
+                            .resizable()
+                            .foregroundColor(Color(.gray))
+                            .frame(width: 30, height: 30, alignment: .leading)
+                        
+                    }
                     Spacer()
                 }
                 .padding(.bottom, -40)
