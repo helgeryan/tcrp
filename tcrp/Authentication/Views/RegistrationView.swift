@@ -20,7 +20,7 @@ struct RegistrationView: View {
         NavigationStack {
             VStack {
                 // Image
-                Image("firebase-logo").resizable()
+                Image("mobiusStrip").resizable()
                     .scaledToFill()
                     .frame(width: 100, height: 100)
                     .padding(.vertical, 32)
