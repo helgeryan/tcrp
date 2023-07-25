@@ -17,9 +17,11 @@ struct ContentView: View {
             ZStack {
                 switch selectedSideMenuTab {
                 case 0:
-                    NewHomeView(presentSideMenu: $presentSideMenu)
+                    HomeView(presentSideMenu: $presentSideMenu)
                 case 1:
                     ProgramsView(presentSideMenu: $presentSideMenu)
+                case 2:
+                    ApproachView(presentSideMenu: $presentSideMenu)
                 case 3:
                     ProfileView(presentSideMenu: $presentSideMenu)
                 default:

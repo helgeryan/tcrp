@@ -8,6 +8,7 @@
 enum SideMenuRowType: Int, CaseIterable {
     case home = 0
     case programs
+    case approach
     case chat
     case profile
     
@@ -15,6 +16,8 @@ enum SideMenuRowType: Int, CaseIterable {
         switch self {
         case .home:
             return "Home"
+        case .approach:
+            return "Approach"
         case .programs:
             return "Programs"
         case .chat:
@@ -28,6 +31,8 @@ enum SideMenuRowType: Int, CaseIterable {
         switch self {
         case .home:
             return "house"
+        case .approach:
+            return "figure.run"
         case .programs:
             return "list.bullet.clipboard.fill"
         case .chat:

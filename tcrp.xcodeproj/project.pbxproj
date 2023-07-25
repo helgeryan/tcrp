@@ -38,6 +38,7 @@
 		E6F6600C2A701A31008A8913 /* Color+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6600B2A701A31008A8913 /* Color+hex.swift */; };
 		E6F6600E2A7051C4008A8913 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6600D2A7051C4008A8913 /* FooterView.swift */; };
 		E6F660102A70523C008A8913 /* HomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6600F2A70523C008A8913 /* HomeSection.swift */; };
+		E6F660142A705402008A8913 /* ApproachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F660132A705402008A8913 /* ApproachView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		E6F6600B2A701A31008A8913 /* Color+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+hex.swift"; sourceTree = "<group>"; };
 		E6F6600D2A7051C4008A8913 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		E6F6600F2A70523C008A8913 /* HomeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSection.swift; sourceTree = "<group>"; };
+		E6F660132A705402008A8913 /* ApproachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproachView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		E6C13E6A2A69D0B600143E63 /* tcrp */ = {
 			isa = PBXGroup;
 			children = (
+				E6F660122A7053F6008A8913 /* Core */,
 				E6C13E872A6E180100143E63 /* golfswing.mov */,
 				E6C13E792A69D1D500143E63 /* Info.plist */,
 				E6C13E6F2A69D0B800143E63 /* Assets.xcassets */,
@@ -266,6 +269,14 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		E6F660122A7053F6008A8913 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E6F660132A705402008A8913 /* ApproachView.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -369,6 +380,7 @@
 				E6F65FFD2A6F187E008A8913 /* SideMenu.swift in Sources */,
 				E6F660072A70197F008A8913 /* Program.swift in Sources */,
 				E6C13E942A6EE77100143E63 /* LoginView.swift in Sources */,
+				E6F660142A705402008A8913 /* ApproachView.swift in Sources */,
 				E6C13E862A6B228A00143E63 /* ProgramView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

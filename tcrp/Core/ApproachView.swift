@@ -1,15 +1,13 @@
 //
-//  HomeView.swift
+//  ApproachView.swift
 //  tcrp
 //
-//  Created by Ryan Helgeson on 7/20/23.
+//  Created by Ryan Helgeson on 7/25/23.
 //
 
 import SwiftUI
 
-struct HomeView: View {
-    @EnvironmentObject var viewModel: AuthViewModel
-    @EnvironmentObject var dbManager: DatabaseManager
+struct ApproachView: View {
     @Binding var presentSideMenu: Bool
     
     var body: some View {
@@ -32,26 +30,53 @@ struct HomeView: View {
                         }.padding()
                         
                         ZStack {
-                            Image("mobiusStrip")
+                            Image("chameleon")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: 300, height: 150, alignment: .leading)
-                                .opacity(0.1)
+                            
+                            
+                            Rectangle()
+                                .aspectRatio(contentMode: .fit)
+                                .background(.black)
+                                .opacity(0.55)
                             
                             VStack(spacing: 20) {
                                 HStack {
-                                    Text("IF YOU WERE OUT OF PAIN TOMORROW, WHAT WOULD THAT LOOK LIKE FOR YOU?")
-                                        .font(.system(size: 14))
+                                    Text("CLINICAL CHAMELEON:")
+                                        .font(.system(size: 20))
                                         .fontWeight(.bold)
+                                        .foregroundColor(.lightBlue)
+                                    Spacer()
+                                }
+                                HStack {
+                                    Text("I am whoever the patient needs me to be, whenever they need me to be.")
+                                        .font(.system(size: 16))
+                                        .fontWeight(.semibold)
+                                        .foregroundColor(.lightBlue)
                                     Spacer()
                                 }
                                 
                                 HStack {
                                     Spacer()
-                                    Text("LET’S FIND A WAY TO GET THERE, TOGETHER.")
+                                    Text("For some it’s a voice of reassurance & reason. For others it’s a listening ear & an open mind.  Sometimes it’s a coach, sometimes a teacher. ")
                                         .font(.system(size: 14))
+                                        .fontWeight(.regular)
+                                        .foregroundColor(.white)
+                                }
+                                HStack {
+                                    Spacer()
+                                    Text("Whatever the case may be...")
+                                        .font(.system(size: 14))
+                                        .fontWeight(.regular)
+                                        .foregroundColor(.white)
+                                }
+                                
+                                HStack {
+                                    Spacer()
+                                    Text("we adapt to you.")
+                                        .font(.system(size: 20))
                                         .fontWeight(.bold)
-                                        .foregroundColor(Color(hex: "008BFF"))
+                                        .foregroundColor(.white)
                                 }
                             }.padding()
                         }
@@ -93,21 +118,6 @@ struct HomeView: View {
                             }
                         }
                         
-                        VStack {
-                            Text("Services")
-                                .foregroundColor(Color(hex: "0088FF"))
-                                .padding()
-                                .font(.system(size: 24))
-                                .fontWeight(.bold)
-                            
-                            HomeInformationSectionView(imageName: "computerDesk", sections: [HomeSectionType.telehealth.section])
-                            HomeInformationSectionView(imageName: "chairs", sections: [
-                                HomeSectionType.initialConsultation.section,
-                                HomeSectionType.starterCall.section
-                            ])
-                            HomeInformationSectionView(imageName: "dumbbells", sections: [HomeSectionType.rehabProgramming.section])
-                        }
-                        
                         FooterView()
                     }
                 }
@@ -118,8 +128,8 @@ struct HomeView: View {
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
+struct ApproachView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(presentSideMenu: .constant(false))
+        ApproachView(presentSideMenu: .constant(false))
     }
 }
