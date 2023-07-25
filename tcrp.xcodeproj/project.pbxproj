@@ -36,6 +36,8 @@
 		E6F660072A70197F008A8913 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F660062A70197F008A8913 /* Program.swift */; };
 		E6F660092A7019E8008A8913 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F660082A7019E8008A8913 /* Exercise.swift */; };
 		E6F6600C2A701A31008A8913 /* Color+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6600B2A701A31008A8913 /* Color+hex.swift */; };
+		E6F6600E2A7051C4008A8913 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6600D2A7051C4008A8913 /* FooterView.swift */; };
+		E6F660102A70523C008A8913 /* HomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6600F2A70523C008A8913 /* HomeSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		E6F660062A70197F008A8913 /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
 		E6F660082A7019E8008A8913 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		E6F6600B2A701A31008A8913 /* Color+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+hex.swift"; sourceTree = "<group>"; };
+		E6F6600D2A7051C4008A8913 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		E6F6600F2A70523C008A8913 /* HomeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,17 +107,16 @@
 		E6C13E6A2A69D0B600143E63 /* tcrp */ = {
 			isa = PBXGroup;
 			children = (
-				E6F660052A70196E008A8913 /* Models */,
-				E6C13E8C2A6EE77100143E63 /* Authentication */,
 				E6C13E872A6E180100143E63 /* golfswing.mov */,
+				E6C13E792A69D1D500143E63 /* Info.plist */,
+				E6C13E6F2A69D0B800143E63 /* Assets.xcassets */,
+				E6F660112A7052CB008A8913 /* App */,
+				E6C13E8C2A6EE77100143E63 /* Authentication */,
+				E6C13E7A2A69E3CD00143E63 /* Home */,
+				E6F660052A70196E008A8913 /* Models */,
+				E6C13E712A69D0B800143E63 /* Preview Content */,
 				E6C13E812A6B098300143E63 /* Programs */,
 				E6C13E7D2A6B07DE00143E63 /* Resources */,
-				E6C13E7A2A69E3CD00143E63 /* Home */,
-				E6C13E792A69D1D500143E63 /* Info.plist */,
-				E6C13E6B2A69D0B600143E63 /* tcrpApp.swift */,
-				E6C13E6D2A69D0B600143E63 /* ContentView.swift */,
-				E6C13E6F2A69D0B800143E63 /* Assets.xcassets */,
-				E6C13E712A69D0B800143E63 /* Preview Content */,
 			);
 			path = tcrp;
 			sourceTree = "<group>";
@@ -132,6 +135,7 @@
 				E6F660032A6F3D6A008A8913 /* ProfileView.swift */,
 				E6F65FFB2A6F186D008A8913 /* SideMenu */,
 				E6C13E7B2A69E3D700143E63 /* HomeView.swift */,
+				E6F6600F2A70523C008A8913 /* HomeSection.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -151,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				E6C13E7F2A6B07FF00143E63 /* TileView.swift */,
+				E6F6600D2A7051C4008A8913 /* FooterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -252,6 +257,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		E6F660112A7052CB008A8913 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E6C13E6B2A69D0B600143E63 /* tcrpApp.swift */,
+				E6C13E6D2A69D0B600143E63 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -350,6 +364,8 @@
 				E6C13EA12A6EE82B00143E63 /* SettingsRowView.swift in Sources */,
 				E6C13E8B2A6ECF7A00143E63 /* ExerciseView.swift in Sources */,
 				E6C13EA22A6EE82B00143E63 /* InputView.swift in Sources */,
+				E6F6600E2A7051C4008A8913 /* FooterView.swift in Sources */,
+				E6F660102A70523C008A8913 /* HomeSection.swift in Sources */,
 				E6F65FFD2A6F187E008A8913 /* SideMenu.swift in Sources */,
 				E6F660072A70197F008A8913 /* Program.swift in Sources */,
 				E6C13E942A6EE77100143E63 /* LoginView.swift in Sources */,
