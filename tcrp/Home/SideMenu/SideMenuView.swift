@@ -25,14 +25,14 @@ struct SideMenuView: View {
                     ProfileImageView()
                         .frame(height: 140)
                         .padding(.bottom, 30)
-                    
+
                     ForEach(SideMenuRowType.allCases, id: \.self){ row in
                         RowView(isSelected: selectedSideMenuTab == row.rawValue, imageName: row.iconName, title: row.title) {
                             selectedSideMenuTab = row.rawValue
                             presentSideMenu.toggle()
                         }
                     }
-                    
+
                     Spacer()
                 }
                 .padding(.top, 100)
@@ -49,16 +49,17 @@ struct SideMenuView: View {
     }
     
     func ProfileImageView() -> some View {
-        VStack(alignment: .center){
+        VStack(alignment: .center) {
             HStack{
                 Spacer()
-                Image("profile-image")
+                Image(systemName: "person")
                     .resizable()
-                    .aspectRatio(contentMode: .fill)
+                    .aspectRatio(contentMode: .fit)
                     .frame(width: 100, height: 100)
                     .overlay(
                         RoundedRectangle(cornerRadius: 50)
                             .stroke(Color("lightBlue").opacity(0.5), lineWidth: 10)
+                            
                     )
                     .cornerRadius(50)
                 Spacer()

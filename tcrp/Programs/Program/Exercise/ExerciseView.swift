@@ -13,9 +13,9 @@ struct ExerciseView: View {
     var body: some View {
         VStack(alignment: .leading) {
             ZStack {
-                VideoPlayer(player: player).frame(width: 300, height: 300 / 0.5625)
+                VideoPlayer(player: player).frame(width: 300, height: 300.0 / player.currentItem!.presentationSize.width * player.currentItem!.presentationSize.height)
             }
-            .frame(width: 300, height: 300, alignment: .center)
+            .frame(width: 300, height: 300.0 / player.currentItem!.presentationSize.width * player.currentItem!.presentationSize.height, alignment: .center)
             .clipped()
             .cornerRadius(20)
             
@@ -37,12 +37,12 @@ struct ExerciseView: View {
         .onAppear {
             addObserver()
             player.play()
-            player.isMuted = true
             print(player.currentItem?.presentationSize)
             print(UIScreen.main.bounds.size)
 
         }
         .onDisappear {
+            player.pause()
             removeObserver()
         }
         .navigationTitle(exercise.name)
@@ -68,6 +68,6 @@ struct ExerciseView: View {
 
 struct ExerciseView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseView(exercise: Exercise(name: "Back Extension", reps: 12, weight: 0, description: "This is to strengthen your back"))
+        ExerciseView(exercise: Exercise(id: UUID().uuidString, name: "Back Extension", reps: 12, weight: 0, description: "This is to strengthen your back"))
     }
 }

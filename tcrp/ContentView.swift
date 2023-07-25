@@ -11,7 +11,8 @@ struct ContentView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
         if viewModel.userSession != nil {
-            HomeView(presentSideMenu: false)
+//            HomeView(presentSideMenu: false)
+            ProfileView()
         } else {
             LoginView()
         }

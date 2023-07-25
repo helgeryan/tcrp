@@ -10,19 +10,20 @@ struct ProgramView: View {
     let program: Program
     var body: some View {
         ZStack {
-            program.color.ignoresSafeArea()
+            Color(hex: program.color).ignoresSafeArea()
             VStack {
                 List {
                     Section("Exercises") {
-                        ForEach(program.exercises, id: \.name) { exercise in
-                            VStack(alignment: .leading) {
-                                NavigationLink {
-                                    ExerciseView(exercise: exercise)
-                                } label: {
-                                    Text(exercise.name)
+                        if let exercises = program.exercises {
+                            ForEach(exercises, id: \.name) { exercise in
+                                VStack(alignment: .leading) {
+                                    NavigationLink {
+                                        ExerciseView(exercise: exercise)
+                                    } label: {
+                                        Text(exercise.name)
+                                    }
                                 }
                             }
-                            
                         }
                     }
                 }
@@ -37,9 +38,9 @@ struct ProgramView: View {
 struct ProgramView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            ProgramView(program: Program(name: "Back Pain", image: "cpu", color: .blue, exercises: [
-                Exercise(name: "Back extensions", reps: 12, weight: 0, description: "Free weight back extensions"),
-                Exercise(name: "Crunches", reps: 12, weight: 0, description: "Abdominal crunches to work the core")
+            ProgramView(program: Program(id: UUID().uuidString, name: "Back Pain", image: "cpu", color: "00FF99", exercises: [
+                Exercise(id: UUID().uuidString, name: "Back extensions", reps: 12, weight: 0, description: "Free weight back extensions"),
+                Exercise(id: UUID().uuidString, name: "Crunches", reps: 12, weight: 0, description: "Abdominal crunches to work the core")
             ]))
         }
     }

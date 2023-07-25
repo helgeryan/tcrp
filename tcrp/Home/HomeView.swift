@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var viewModel: AuthViewModel
+    @EnvironmentObject var dbManager: DatabaseManager
     @State var presentSideMenu: Bool
     @State var selectedSideMenuTab = 0
     

@@ -11,12 +11,15 @@ import Firebase
 @main
 struct tcrpApp: App {
     @StateObject var viewModel = AuthViewModel()
+    @StateObject var dbManager = DatabaseManager()
     init() {
         FirebaseApp.configure()
     }
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(viewModel)
+            ContentView()
+                .environmentObject(viewModel)
+                .environmentObject(dbManager)
         }
     }
 }
