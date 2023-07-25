@@ -17,7 +17,7 @@ struct tcrpApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().preferredColorScheme(.light)
                 .environmentObject(viewModel)
                 .environmentObject(dbManager)
         }
