@@ -162,6 +162,8 @@ struct NewHomeView: View {
                             ])
                             HomeInformationSectionView(imageName: "dumbbells", sections: [HomeSectionType.rehabProgramming.section])
                         }
+                        
+                        FooterView()
                     }
                 }
                 
@@ -247,6 +249,34 @@ struct HomeInformationSectionView: View {
                         .padding(.bottom, 20)
                 }
             }
+        }
+    }
+}
+
+
+struct FooterView: View {
+    
+    var body: some View {
+        ZStack {
+            Image("tcrpfull")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            Rectangle()
+                .background(.black)
+                .opacity(0.7)
+            VStack(alignment: .leading, spacing: 10) {
+                Text("Twin Cities Rehab & Performance")
+                    .font(.system(size: 20))
+                    .fontWeight(.bold)
+                    .foregroundColor(.lightBlue)
+                
+                Text("aaronkubalDC@gmail.com")
+                    .foregroundColor(.white)
+                    .tint(Color(.white))
+                    .font(.system(size: 18))
+                    .fontWeight(.semibold)
+            }
+            
         }
     }
 }
