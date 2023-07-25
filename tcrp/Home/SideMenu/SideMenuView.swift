@@ -86,9 +86,10 @@ struct SideMenuView: View {
                         .frame(width: 5)
                     
                     ZStack{
-                        Image(imageName)
+                        Image(systemName: imageName)
                             .resizable()
                             .renderingMode(.template)
+                            .aspectRatio(contentMode: .fit)
                             .foregroundColor(isSelected ? .black : .gray)
                             .frame(width: 26, height: 26)
                     }

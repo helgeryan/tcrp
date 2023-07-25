@@ -18,7 +18,9 @@ struct ContentView: View {
                 switch selectedSideMenuTab {
                 case 0:
                     HomeView(presentSideMenu: $presentSideMenu)
-                case 1, 2, 3:
+                case 1:
+                    ProgramsView(presentSideMenu: $presentSideMenu)
+                case 3:
                     ProfileView(presentSideMenu: $presentSideMenu)
                 default:
                     HomeView(presentSideMenu: $presentSideMenu)

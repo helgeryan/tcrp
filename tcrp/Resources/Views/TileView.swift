@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct TileView: View {
+    @Binding var presentSideMenu: Bool
     let tileWidth: CGFloat
     let iconName: String
     let title: String
     var body: some View {
         NavigationLink {
-            ProgramsView()
+            ProgramsView(presentSideMenu: $presentSideMenu, showSideMenu: false)
         } label: {
             HStack {
                 VStack(spacing: 20) {
@@ -38,6 +39,6 @@ struct TileView: View {
 
 struct TileView_Previews: PreviewProvider {
     static var previews: some View {
-        TileView(tileWidth: UIScreen.main.bounds.width / 2 - 60, iconName: "book", title: "Book")
+        TileView(presentSideMenu: .constant(false), tileWidth: UIScreen.main.bounds.width / 2 - 60, iconName: "book", title: "Book")
     }
 }

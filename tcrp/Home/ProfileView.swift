@@ -20,64 +20,67 @@ struct ProfileView: View {
   
     var body: some View {
         if let user = viewModel.currentUser {
-            List {
+            VStack {
                 HStack {
                     Button {
                         presentSideMenu.toggle()
                     } label: {
-                        Image(systemName: "square.leftthird.inset.filled")
+                        Image(systemName: "text.justify")
                             .resizable()
+                            .aspectRatio(contentMode: .fit)
                             .foregroundColor(Color(.gray))
-                            .frame(width: 30, height: 30, alignment: .leading)
-                        
-                    }
+                            .frame(width: 25, height: 25, alignment: .leading)
+
+                    }.padding()
                     Spacer()
                 }
                 
-                Section {
-                    HStack {
-                        Text(user.initials)
-                            .font(.title)
-                            .fontWeight(.semibold)
-                            .foregroundColor(.white)
-                            .frame(width: 72, height: 72)
-                            .background(Color(.systemGray3))
-                            .clipShape(Circle())
-
-                        VStack(alignment: .leading,spacing: 4) {
-                            Text(user.fullname)
-                                .font(.subheadline)
+                List {
+                    Section {
+                        HStack {
+                            Text(user.initials)
+                                .font(.title)
                                 .fontWeight(.semibold)
-                                .padding(.top, 4)
-                            Text(user.email)
-                                .font(.footnote)
+                                .foregroundColor(.white)
+                                .frame(width: 72, height: 72)
+                                .background(Color(.systemGray3))
+                                .clipShape(Circle())
+
+                            VStack(alignment: .leading,spacing: 4) {
+                                Text(user.fullname)
+                                    .font(.subheadline)
+                                    .fontWeight(.semibold)
+                                    .padding(.top, 4)
+                                Text(user.email)
+                                    .font(.footnote)
+                                    .foregroundColor(.gray)
+                            }
+                        }
+                    }
+
+                    Section("General") {
+                        HStack {
+                            SettingsRowView(imageName: "gear", title: "Version", tintColor: Color(.systemGray))
+                            Spacer()
+                            Text("1.0.0")
+                                .font(.subheadline)
                                 .foregroundColor(.gray)
                         }
                     }
-                }
+                    
+                    Section("Account") {
+                        Button {
+                            debugPrint("Sign out..")
+                            viewModel.signOut()
+                        } label: {
+                            SettingsRowView(imageName: "arrow.left.circle.fill", title: "Sign out", tintColor: .red)
+                        }
 
-                Section("General") {
-                    HStack {
-                        SettingsRowView(imageName: "gear", title: "Version", tintColor: Color(.systemGray))
-                        Spacer()
-                        Text("1.0.0")
-                            .font(.subheadline)
-                            .foregroundColor(.gray)
-                    }
-                }
-                
-                Section("Account") {
-                    Button {
-                        debugPrint("Sign out..")
-                        viewModel.signOut()
-                    } label: {
-                        SettingsRowView(imageName: "arrow.left.circle.fill", title: "Sign out", tintColor: .red)
-                    }
-
-                    Button {
-                        debugPrint("Deleting account..")
-                    } label: {
-                        SettingsRowView(imageName: "xmark.circle.fill", title: "Delete account", tintColor: .red)
+                        Button {
+                            debugPrint("Deleting account..")
+                        } label: {
+                            SettingsRowView(imageName: "xmark.circle.fill", title: "Delete account", tintColor: .red)
+                        }
                     }
                 }
             }

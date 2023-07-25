@@ -17,20 +17,19 @@ struct HomeView: View {
         NavigationStack {
             ZStack {
                 VStack(spacing: 20) {
-                    
                     HStack {
                         Button {
                             presentSideMenu.toggle()
                         } label: {
-                            Image(systemName: "square.leftthird.inset.filled")
+                            Image(systemName: "text.justify")
                                 .resizable()
+                                .aspectRatio(contentMode: .fit)
                                 .foregroundColor(Color(.gray))
-                                .frame(width: 30, height: 30, alignment: .leading)
+                                .frame(width: 25, height: 25, alignment: .leading)
                             
                         }
                         Spacer()
                     }
-                    .padding(.bottom, -40)
                     
                     Image("mobiusStrip")
                         .resizable()
@@ -39,19 +38,18 @@ struct HomeView: View {
                         .clipShape(Circle())
                     
                     HStack(spacing: 20) {
-                        TileView(tileWidth: cardWidth, iconName: "phone", title: "Contact")
-                        TileView(tileWidth: cardWidth, iconName: "list.bullet.clipboard.fill", title: "Programs")
+                        TileView(presentSideMenu: .constant(false), tileWidth: cardWidth, iconName: "phone", title: "Contact")
+                        TileView(presentSideMenu: .constant(false), tileWidth: cardWidth, iconName: "list.bullet.clipboard.fill", title: "Programs")
                     }
                     
                     
-                    TileView(tileWidth: cardWidth, iconName: "book", title: "Book")
+                    TileView(presentSideMenu: .constant(false), tileWidth: cardWidth, iconName: "book", title: "Book")
                     Spacer()
                 }
                 .padding()
                 .background(
                     LinearGradient(gradient: Gradient(colors: [.white, Color("lightBlue")]), startPoint: .top, endPoint: .bottom)
                 )
-                
             }
         }
     }
