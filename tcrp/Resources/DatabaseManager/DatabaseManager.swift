@@ -23,4 +23,17 @@ class DatabaseManager: ObservableObject {
         debugPrint("Programs \(programs)")
         return programs
     }
+    
+    func createPrograms() async throws {
+        do {
+            let programs = Program.mockPrograms
+            for program in programs {
+                let encodedProgram = try Firestore.Encoder().encode(program)
+                try await Firestore.firestore().collection("programs").document(program.id).setData(encodedProgram)
+            }
+            
+        } catch {
+            debugPrint("Failed to create program with error \(error.localizedDescription)")
+        }
+    }
 }
