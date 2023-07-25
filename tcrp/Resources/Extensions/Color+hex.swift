@@ -9,6 +9,11 @@ import Foundation
 import SwiftUI
 
 extension Color {
+    // MARK: - Static colors
+    static let lightBlue: Color = Color(hex: "0088FF")
+    
+    
+    
     init(hex: String) {
         let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int: UInt64 = 0
