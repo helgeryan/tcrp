@@ -10,8 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     @EnvironmentObject var dbManager: DatabaseManager
-    @State var presentSideMenu: Bool
-    @State var selectedSideMenuTab = 0
+    @Binding var presentSideMenu: Bool
     
     var body: some View {
         let cardWidth = (UIScreen.main.bounds.width / 2) - 60
@@ -23,7 +22,7 @@ struct HomeView: View {
                         Button {
                             presentSideMenu.toggle()
                         } label: {
-                            Image(systemName: "staroflife.fill")
+                            Image(systemName: "square.leftthird.inset.filled")
                                 .resizable()
                                 .foregroundColor(Color(.gray))
                                 .frame(width: 30, height: 30, alignment: .leading)
@@ -53,7 +52,6 @@ struct HomeView: View {
                     LinearGradient(gradient: Gradient(colors: [.white, Color("lightBlue")]), startPoint: .top, endPoint: .bottom)
                 )
                 
-                SideMenu(isShowing: $presentSideMenu, content: AnyView(SideMenuView(selectedSideMenuTab: $selectedSideMenuTab, presentSideMenu: $presentSideMenu)))
             }
         }
     }
@@ -61,6 +59,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(presentSideMenu: false)
+        HomeView(presentSideMenu: .constant(false))
     }
 }

@@ -9,26 +9,31 @@ import SwiftUI
 import FirebaseFirestore
 
 class ProfileViewModel: ObservableObject {
-    @Published var programs: [Program]?
+
     
-    init() {
-        Task {
-            await fetchPrograms()
-        }
-    }
-    func fetchPrograms() async {
-        programs = await DatabaseManager.shared.fetchPrograms()
-        debugPrint("Got this many programs: \(programs?.count ?? 0)")
-    }
 }
 
 struct ProfileView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     @State var profileModel = ProfileViewModel()
+    @Binding var presentSideMenu: Bool
   
     var body: some View {
         if let user = viewModel.currentUser {
             List {
+                HStack {
+                    Button {
+                        presentSideMenu.toggle()
+                    } label: {
+                        Image(systemName: "square.leftthird.inset.filled")
+                            .resizable()
+                            .foregroundColor(Color(.gray))
+                            .frame(width: 30, height: 30, alignment: .leading)
+                        
+                    }
+                    Spacer()
+                }
+                
                 Section {
                     HStack {
                         Text(user.initials)
@@ -61,23 +66,6 @@ struct ProfileView: View {
                     }
                 }
                 
-                if let programs = profileModel.programs {
-                    Section("Programs") {
-                        ForEach(programs) { program in
-                            HStack {
-                                SettingsRowView(imageName: "gear", title: program.name, tintColor: Color(hex: program.color))
-                                Spacer()
-                                Text(program.image)
-                                    .font(.subheadline)
-                                    .foregroundColor(.gray)
-                            }
-                        }
-                    }
-                } else {
-                    Text("Uh oh")
-                }
-                
-
                 Section("Account") {
                     Button {
                         debugPrint("Sign out..")
@@ -99,6 +87,6 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileView(presentSideMenu: .constant(false))
     }
 }

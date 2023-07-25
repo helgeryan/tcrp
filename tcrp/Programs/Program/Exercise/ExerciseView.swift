@@ -9,13 +9,15 @@ import SwiftUI
 import AVKit
 struct ExerciseView: View {
     let exercise: Exercise
-    let player = AVPlayer(url: Bundle.main.url(forResource: "golfswing", withExtension: "mov")!)
+    @State var player: AVPlayer? = AVPlayer(url: Bundle.main.url(forResource: "golfswing", withExtension: "mov")!)
     var body: some View {
         VStack(alignment: .leading) {
             ZStack {
-                VideoPlayer(player: player).frame(width: 300, height: 300.0 / player.currentItem!.presentationSize.width * player.currentItem!.presentationSize.height)
+                if let player = player {
+                    VideoPlayer(player: player).frame(width: 300, height: 300.0 / player.currentItem!.presentationSize.width * player.currentItem!.presentationSize.height)
+                }
             }
-            .frame(width: 300, height: 300.0 / player.currentItem!.presentationSize.width * player.currentItem!.presentationSize.height, alignment: .center)
+            .frame(width: 300, height: 300.0 / player!.currentItem!.presentationSize.width * player!.currentItem!.presentationSize.height, alignment: .center)
             .clipped()
             .cornerRadius(20)
             
@@ -36,13 +38,12 @@ struct ExerciseView: View {
         }
         .onAppear {
             addObserver()
-            player.play()
-            print(player.currentItem?.presentationSize)
-            print(UIScreen.main.bounds.size)
+            player?.play()
 
         }
         .onDisappear {
-            player.pause()
+            player?.pause()
+            player = nil
             removeObserver()
         }
         .navigationTitle(exercise.name)
@@ -52,10 +53,10 @@ struct ExerciseView: View {
     func addObserver() {
         
         NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime,
-                                               object: player.currentItem,
+                                               object: player?.currentItem,
                                                queue: nil) { notif in // 3
-            player.seek(to: .zero) // 4
-            player.play() // 5
+            player?.seek(to: .zero) // 4
+            player?.play() // 5
         }
     }
     

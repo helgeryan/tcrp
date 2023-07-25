@@ -7,30 +7,49 @@
 
 import SwiftUI
 
+class ProgramsViewModel: ObservableObject {
+    @Published var programs: [Program]?
+    
+    init() {
+        Task {
+            await fetchPrograms()
+        }
+    }
+    func fetchPrograms() async {
+        programs = await DatabaseManager.shared.fetchPrograms()
+        debugPrint("Got this many programs: \(programs?.count ?? 0)")
+    }
+}
+
+
 struct ProgramsView: View {
-    var programs: [Program] = [
-        Program(id: UUID().uuidString, name: "Back Pain", image: "figure.strengthtraining.functional", color: "AAAAAA", exercises: [
-            Exercise(id: UUID().uuidString, name: "Back extensions", reps: 12, weight: 0, description: "Free weight back extensions"),
-            Exercise(id: UUID().uuidString, name: "Crunches", reps: 12, weight: 0, description: "Abdominal crunches to work the core")
-        ]),
-        Program(id: UUID().uuidString, name: "Knee Pain", image: "figure.flexibility", color: "AAAAAA", exercises: [
-            Exercise(id: UUID().uuidString, name: "Back extensions", reps: 12, weight: 0, description: "Free weight back extensions"),
-            Exercise(id: UUID().uuidString, name: "Crunches", reps: 12, weight: 0, description: "Abdominal crunches to work the core")
-        ]),
-        Program(id: UUID().uuidString, name: "Dick Pain", image: "figure.jumprope", color: "AAAAAA", exercises: [
-            Exercise(id: UUID().uuidString, name: "Back extensions", reps: 12, weight: 0, description: "Free weight back extensions"),
-            Exercise(id: UUID().uuidString, name: "Crunches", reps: 12, weight: 0, description: "Abdominal crunches to work the core")
-        ])
-    ]
+    
+    @State var programsModel = ProgramsViewModel()
+//    var programs: [Program] = [
+//        Program(id: UUID().uuidString, name: "Back Pain", image: "figure.strengthtraining.functional", color: "AAAAAA", exercises: [
+//            Exercise(id: UUID().uuidString, name: "Back extensions", reps: 12, weight: 0, description: "Free weight back extensions"),
+//            Exercise(id: UUID().uuidString, name: "Crunches", reps: 12, weight: 0, description: "Abdominal crunches to work the core")
+//        ]),
+//        Program(id: UUID().uuidString, name: "Knee Pain", image: "figure.flexibility", color: "AAAAAA", exercises: [
+//            Exercise(id: UUID().uuidString, name: "Back extensions", reps: 12, weight: 0, description: "Free weight back extensions"),
+//            Exercise(id: UUID().uuidString, name: "Crunches", reps: 12, weight: 0, description: "Abdominal crunches to work the core")
+//        ]),
+//        Program(id: UUID().uuidString, name: "Dick Pain", image: "figure.jumprope", color: "AAAAAA", exercises: [
+//            Exercise(id: UUID().uuidString, name: "Back extensions", reps: 12, weight: 0, description: "Free weight back extensions"),
+//            Exercise(id: UUID().uuidString, name: "Crunches", reps: 12, weight: 0, description: "Abdominal crunches to work the core")
+//        ])
+//    ]
     
     var body: some View {
         List {
-            Section("Programs") {
-                ForEach(programs, id: \.name) { program in
-                    NavigationLink {
-                        ProgramView(program: program)
-                    } label: {
-                        Label(program.name, systemImage: program.image).foregroundColor(Color(hex: program.color))
+            if let programs = programsModel.programs {
+                Section("Programs") {
+                    ForEach(programs, id: \.name) { program in
+                        NavigationLink {
+                            ProgramView(program: program)
+                        } label: {
+                            Label(program.name, systemImage: program.image).foregroundColor(Color(hex: program.color))
+                        }
                     }
                 }
             }
