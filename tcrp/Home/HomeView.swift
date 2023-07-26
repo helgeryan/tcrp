@@ -17,19 +17,7 @@ struct HomeView: View {
             ZStack {
                 ScrollView {
                     VStack {
-                        HStack {
-                            Button {
-                                presentSideMenu.toggle()
-                            } label: {
-                                Image(systemName: "text.justify")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .foregroundColor(Color(.gray))
-                                    .frame(width: 25, height: 25, alignment: .leading)
-                                
-                            }
-                            Spacer()
-                        }.padding()
+                        HeaderView(presentSideMenu: $presentSideMenu)
                         
                         ZStack {
                             Image("mobiusStrip")
@@ -56,42 +44,7 @@ struct HomeView: View {
                             }.padding()
                         }
                         
-                        ZStack {
-                            Image("mobiusStrip")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 300, height: 150, alignment: .leading)
-                            
-                            Rectangle()
-                                .background(.black)
-                                .opacity(0.7)
-                            
-                            VStack {
-                                Image("aarondesk")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 250, height: 250)
-                                    .padding()
-                                HStack {
-                                    Text("\"First, seek to underestand...\"")
-                                        .background(.black)
-                                        .font(.system(size: 20))
-                                        .fontWeight(.bold)
-                                        .foregroundColor(.white)
-                                        .padding()
-                                    Spacer()
-                                }
-                                
-                                HStack {
-                                    Spacer()
-                                    Text("You can’t be helped until you’ve been heard. The way forward starts with telling me your story. \n\nFrom the beginning, we work together to map out all of the things that might be contributing to your pain/injury experience. Through shared decision-making, we decide which factors we can have the greatest impact on and create a plan that gives you the ability to work toward your goals on your own terms, whatever they may be.")
-                                        .font(.system(size: 14))
-                                        .fontWeight(.semibold)
-                                        .foregroundColor(.white)
-                                        .padding()
-                                }
-                            }
-                        }
+                        DarkContextView(imageName: "aarondesk", header: "\"First, seek to underestand...\"", context: "You can’t be helped until you’ve been heard. The way forward starts with telling me your story. \n\nFrom the beginning, we work together to map out all of the things that might be contributing to your pain/injury experience. Through shared decision-making, we decide which factors we can have the greatest impact on and create a plan that gives you the ability to work toward your goals on your own terms, whatever they may be.")
                         
                         VStack {
                             Text("Services")

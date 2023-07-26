@@ -15,19 +15,7 @@ struct ApproachView: View {
             ZStack {
                 ScrollView {
                     VStack {
-                        HStack {
-                            Button {
-                                presentSideMenu.toggle()
-                            } label: {
-                                Image(systemName: "text.justify")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .foregroundColor(Color(.gray))
-                                    .frame(width: 25, height: 25, alignment: .leading)
-                                
-                            }
-                            Spacer()
-                        }.padding()
+                        HeaderView(presentSideMenu: $presentSideMenu)
                         
                         ZStack {
                             Image("chameleon")

@@ -15,56 +15,10 @@ struct ProgrammingView: View {
             ZStack {
                 ScrollView {
                     VStack {
-                        HStack {
-                            Button {
-                                presentSideMenu.toggle()
-                            } label: {
-                                Image(systemName: "text.justify")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .foregroundColor(Color(.gray))
-                                    .frame(width: 25, height: 25, alignment: .leading)
-                                
-                            }
-                            Spacer()
-                        }.padding()
-                        
-                        ZStack {
-                            Image("mobiusStrip")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 300, height: 150, alignment: .leading)
-                            
-                            Rectangle()
-                                .background(.black)
-                                .opacity(0.7)
-                            
-                            VStack {
-                                Image("bridge")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 250, height: 250)
-                                    .padding()
-                                HStack {
-                                    Text("Bridging The Gap...")
-                                        .background(.black)
-                                        .font(.system(size: 20))
-                                        .fontWeight(.bold)
-                                        .foregroundColor(.white)
-                                        .padding()
-                                    Spacer()
-                                }
-                                
-                                HStack {
-                                    Spacer()
-                                    Text("Our primary means of care is creating a program designed to take you from where you are to where you want to be. Learning as much about you as we can during our initial conversation makes this possible.\n\nThe things that make you & your experience unique are what give the program its shape. We factor in what provokes your symptoms, what you are apprehensive of or concerned about being able to do, what you want to be able to do, what activities/exercises you value most, what you do for work, and much more.\n\nWe aren't making a program for a painful body part; we are making a program for a person dealing with pain. The wide variety of factors we consider is a reflection of this.\n\nJust as symptoms and circumstances change, so does your programming. The value in our approach comes from the process, and part of the process is adapting to the situation as it unfolds. Everyone is different, and we cannot predict how you or your symptoms will respond to our plan. To reconcile this, we maintain an open line of communication and stand ready to make changes as we go.")
-                                        .font(.system(size: 14))
-                                        .fontWeight(.semibold)
-                                        .foregroundColor(.white)
-                                        .padding()
-                                }
-                            }
-                        }
+                        HeaderView(presentSideMenu: $presentSideMenu)
+      
+                        DarkContextView(imageName: "bridge", header: "Bridging The Gap...", context: "Our primary means of care is creating a program designed to take you from where you are to where you want to be. Learning as much about you as we can during our initial conversation makes this possible.\n\nThe things that make you & your experience unique are what give the program its shape. We factor in what provokes your symptoms, what you are apprehensive of or concerned about being able to do, what you want to be able to do, what activities/exercises you value most, what you do for work, and much more.\n\nWe aren't making a program for a painful body part; we are making a program for a person dealing with pain. The wide variety of factors we consider is a reflection of this.\n\nJust as symptoms and circumstances change, so does your programming. The value in our approach comes from the process, and part of the process is adapting to the situation as it unfolds. Everyone is different, and we cannot predict how you or your symptoms will respond to our plan. To reconcile this, we maintain an open line of communication and stand ready to make changes as we go.")
+
                         
                         Text("Self-Management Programming: Main Features")
                             .font(.system(size: 20))
