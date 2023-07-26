@@ -41,6 +41,7 @@
 		E6F660142A705402008A8913 /* ApproachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F660132A705402008A8913 /* ApproachView.swift */; };
 		E6F660172A718B65008A8913 /* InspirationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F660162A718B65008A8913 /* InspirationView.swift */; };
 		E6F660192A718B89008A8913 /* QuoteContextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F660182A718B89008A8913 /* QuoteContextView.swift */; };
+		E6F6601C2A718BFE008A8913 /* ProgrammingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6601B2A718BFE008A8913 /* ProgrammingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		E6F660132A705402008A8913 /* ApproachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproachView.swift; sourceTree = "<group>"; };
 		E6F660162A718B65008A8913 /* InspirationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspirationView.swift; sourceTree = "<group>"; };
 		E6F660182A718B89008A8913 /* QuoteContextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteContextView.swift; sourceTree = "<group>"; };
+		E6F6601B2A718BFE008A8913 /* ProgrammingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +278,7 @@
 		E6F660122A7053F6008A8913 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E6F6601A2A718BF0008A8913 /* Programming */,
 				E6F660152A718B54008A8913 /* Approach */,
 			);
 			path = Core;
@@ -289,6 +292,14 @@
 				E6F660182A718B89008A8913 /* QuoteContextView.swift */,
 			);
 			path = Approach;
+			sourceTree = "<group>";
+		};
+		E6F6601A2A718BF0008A8913 /* Programming */ = {
+			isa = PBXGroup;
+			children = (
+				E6F6601B2A718BFE008A8913 /* ProgrammingView.swift */,
+			);
+			path = Programming;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,6 +408,7 @@
 				E6F660172A718B65008A8913 /* InspirationView.swift in Sources */,
 				E6C13E942A6EE77100143E63 /* LoginView.swift in Sources */,
 				E6F660142A705402008A8913 /* ApproachView.swift in Sources */,
+				E6F6601C2A718BFE008A8913 /* ProgrammingView.swift in Sources */,
 				E6C13E862A6B228A00143E63 /* ProgramView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,7 +19,7 @@ struct ContentView: View {
                 case 0:
                     HomeView(presentSideMenu: $presentSideMenu)
                 case 1:
-                    ProgramsView(presentSideMenu: $presentSideMenu)
+                    ProgrammingView(presentSideMenu: $presentSideMenu)
                 case 2:
                     ApproachView(presentSideMenu: $presentSideMenu)
                 case 3:
