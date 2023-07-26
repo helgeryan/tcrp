@@ -9,7 +9,7 @@ enum SideMenuRowType: Int, CaseIterable {
     case home = 0
     case programs
     case approach
-    case chat
+    case about
     case profile
     
     var title: String{
@@ -20,8 +20,8 @@ enum SideMenuRowType: Int, CaseIterable {
             return "Approach"
         case .programs:
             return "Programs"
-        case .chat:
-            return "Chat"
+        case .about:
+            return "About"
         case .profile:
             return "Profile"
         }
@@ -35,8 +35,8 @@ enum SideMenuRowType: Int, CaseIterable {
             return "figure.run"
         case .programs:
             return "list.bullet.clipboard.fill"
-        case .chat:
-            return "message"
+        case .about:
+            return "info.circle"
         case .profile:
             return "person.fill"
         }

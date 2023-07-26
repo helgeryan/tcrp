@@ -21,19 +21,7 @@ struct ProfileView: View {
     var body: some View {
         if let user = viewModel.currentUser {
             VStack {
-                HStack {
-                    Button {
-                        presentSideMenu.toggle()
-                    } label: {
-                        Image(systemName: "text.justify")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .foregroundColor(Color(.gray))
-                            .frame(width: 25, height: 25, alignment: .leading)
-
-                    }.padding()
-                    Spacer()
-                }
+                HeaderView(presentSideMenu: $presentSideMenu)
                 
                 List {
                     Section {

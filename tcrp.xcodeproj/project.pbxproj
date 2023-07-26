@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E633AC432A7192EA00DAE7D6 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E633AC422A7192EA00DAE7D6 /* HeaderView.swift */; };
 		E633AC452A71947100DAE7D6 /* DarkContextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E633AC442A71947100DAE7D6 /* DarkContextView.swift */; };
+		E633AC482A7199D500DAE7D6 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E633AC472A7199D500DAE7D6 /* AboutView.swift */; };
 		E6C13E6C2A69D0B600143E63 /* tcrpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C13E6B2A69D0B600143E63 /* tcrpApp.swift */; };
 		E6C13E6E2A69D0B600143E63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C13E6D2A69D0B600143E63 /* ContentView.swift */; };
 		E6C13E702A69D0B800143E63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6C13E6F2A69D0B800143E63 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		E633AC422A7192EA00DAE7D6 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		E633AC442A71947100DAE7D6 /* DarkContextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkContextView.swift; sourceTree = "<group>"; };
+		E633AC472A7199D500DAE7D6 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		E6C13E682A69D0B600143E63 /* tcrp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tcrp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6C13E6B2A69D0B600143E63 /* tcrpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tcrpApp.swift; sourceTree = "<group>"; };
 		E6C13E6D2A69D0B600143E63 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E633AC462A7199C400DAE7D6 /* AboutView */ = {
+			isa = PBXGroup;
+			children = (
+				E633AC472A7199D500DAE7D6 /* AboutView.swift */,
+			);
+			path = AboutView;
+			sourceTree = "<group>";
+		};
 		E6C13E5F2A69D0B600143E63 = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +294,7 @@
 		E6F660122A7053F6008A8913 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E633AC462A7199C400DAE7D6 /* AboutView */,
 				E6F6601A2A718BF0008A8913 /* Programming */,
 				E6F660152A718B54008A8913 /* Approach */,
 			);
@@ -393,6 +404,7 @@
 				E6C13E7C2A69E3D700143E63 /* HomeView.swift in Sources */,
 				E6C13E6E2A69D0B600143E63 /* ContentView.swift in Sources */,
 				E6C13E802A6B07FF00143E63 /* TileView.swift in Sources */,
+				E633AC482A7199D500DAE7D6 /* AboutView.swift in Sources */,
 				E6F660022A6F32F1008A8913 /* DatabaseManager.swift in Sources */,
 				E6F660092A7019E8008A8913 /* Exercise.swift in Sources */,
 				E6F6600C2A701A31008A8913 /* Color+hex.swift in Sources */,

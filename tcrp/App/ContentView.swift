@@ -23,6 +23,8 @@ struct ContentView: View {
                 case 2:
                     ApproachView(presentSideMenu: $presentSideMenu)
                 case 3:
+                    AboutView(presentSideMenu: $presentSideMenu)
+                case 4:
                     ProfileView(presentSideMenu: $presentSideMenu)
                 default:
                     HomeView(presentSideMenu: $presentSideMenu)
