@@ -26,6 +26,8 @@ struct ContentView: View {
                     AboutView(presentSideMenu: $presentSideMenu)
                 case 4:
                     ProfileView(presentSideMenu: $presentSideMenu)
+                case 5:
+                    QuizListView(presentSideMenu: $presentSideMenu)
                 default:
                     HomeView(presentSideMenu: $presentSideMenu)
                 }

@@ -34,6 +34,23 @@ struct SideMenuView: View {
                     }
 
                     Spacer()
+                    
+                    HStack {
+                        Link(destination: URL(string: "https://www.instagram.com/aaron_kubal/")!, label: {
+                            Image("insta")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 30, height: 30)
+                                .padding()
+                        })
+                        Link(destination: URL(string: "https://www.tiktok.com/@aaron_kubaldc")!, label: {
+                            Image(systemName: "link")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 30, height: 30)
+                        })
+                        Spacer()
+                    }.padding()
                 }
                 .padding(.top, 100)
                 .frame(width: 270)

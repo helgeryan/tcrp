@@ -11,6 +11,7 @@ enum SideMenuRowType: Int, CaseIterable {
     case approach
     case about
     case profile
+    case quiz
     
     var title: String{
         switch self {
@@ -24,6 +25,8 @@ enum SideMenuRowType: Int, CaseIterable {
             return "About"
         case .profile:
             return "Profile"
+        case .quiz:
+            return "Quiz"
         }
     }
     
@@ -39,6 +42,8 @@ enum SideMenuRowType: Int, CaseIterable {
             return "info.circle"
         case .profile:
             return "person.fill"
+        case .quiz:
+            return "clipboard"
         }
     }
 }
